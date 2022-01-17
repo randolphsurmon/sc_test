@@ -16,6 +16,8 @@ import "OpenZeppelin/openzeppelin-contracts@4.4.1/contracts/token/ERC20/ERC20.so
     // address WBNB_address = 0xae13d989dac2f0debff460ac112a837c89baa7cd;
     // address pancake_factory = 0xB7926C0430Afb07AA7DEfDE6DA862aE0Bde767bc;
     
+    
+    
     address payable[] public players;
 
     address public owner  = msg.sender; 
@@ -24,6 +26,8 @@ import "OpenZeppelin/openzeppelin-contracts@4.4.1/contracts/token/ERC20/ERC20.so
         _mint(owner,100 * 10**18);
         // 100 * 10**18
     }
-
+    function retrive_owner() external view returns (address) {
+        return owner;
+    }
  } 
 
